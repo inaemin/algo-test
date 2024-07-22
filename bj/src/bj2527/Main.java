@@ -15,14 +15,30 @@ public class Main {
 				rec2[k] = sc.nextInt();
 			}
 			
-			// 직사각형
-			// 
-			
-			// 선분
+			// 공통부분이 없음
+			// 가로의 min이 다른 하나의 max보다 커야 함.
+			// 또는 세로의 min이 다른 하나의 max보다 커야 함.
+			if (rec1[0] > rec2[2] || rec2[0] > rec1[2] || rec1[1] > rec2[3] || rec2[1] > rec1[3]) {
+				System.out.println("d");
+			}
 			
 			// 점
+			else if ((rec1[0] == rec2[2] && rec1[1] == rec2[3])
+			|| (rec1[2] == rec2[0] && rec1[1] == rec2[3])
+			|| (rec1[0] == rec2[2] && rec1[3] == rec2[1])
+			|| (rec1[2] == rec2[0] && rec1[3] == rec2[1])) {
+				System.out.println("c");
+			}
 			
-			// 공통부분이 없음
+			// 선분
+			else if (rec1[0] == rec2[2] || rec1[2] == rec2[0] || rec1[1] == rec2[3] || rec2[1] == rec1[3]) {
+				System.out.println("b");
+			}
+			
+			// 직사각형
+			else {
+				System.out.println("a");
+			}
 		}
 		sc.close();
 	}

@@ -29,8 +29,8 @@ public class Main {
 			}
 		}
 
-		int smallWidth = len_arr[(maxWidthIndex+3)%6];
-		int smallHeight = len_arr[(maxHeightIndex+3)%6];
+		int smallWidth = len_arr[(maxWidthIndex+3) % 6];
+		int smallHeight = len_arr[(maxHeightIndex+3) % 6];
 		
 		int area = maxWidth * maxHeight - smallWidth * smallHeight;
 		System.out.println(fruit * area);
