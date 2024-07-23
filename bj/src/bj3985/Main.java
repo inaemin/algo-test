@@ -39,6 +39,7 @@ public class Main {
 
 		System.out.println(predicted_max_cake_person);
 		System.out.println(actual_max_cake_person);
+		sc.close();
 		
 	}
 }
